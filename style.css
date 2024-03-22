@@ -1,0 +1,263 @@
+:root{
+    --color-black: #1b1b1b;
+    --color-white: #fff;
+    --color-mingray: #f5f5f5;
+    --color-rose: #DA8EA5;
+    --color-green: #598340;
+    --color-blue: #57a1c4;
+}
+
+body{
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.bgheader{
+    
+    height: 5rem;
+    overflow: hidden;
+}
+
+.bgheader img{
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+    transform: translate(0, -50%);
+}
+
+.piccontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.picbox{
+    position: absolute;
+    width: 6.25rem;
+    height: 6.25rem;
+    border-radius: 50%;
+    border: 2px solid var(--color-white);
+    overflow: hidden;
+}
+
+.picbox img{
+    width: 6.25rem;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.add{
+    background-color: #DA8EA5;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-rose);
+    width: 1.5rem;
+    height: 1.5rem;
+    top: 2.25rem;
+    border-radius: 50%;
+    z-index: 1;
+    transition: all .2s ease;
+}
+
+.bar:hover{
+    background-color: var(--color-green);
+}
+
+.bar > .barplus{
+    background-color: #fff;
+    width: .75rem;
+    height: .1rem;
+    position: absolute;
+}
+
+.two{
+    transform: rotate(90deg);
+}
+
+/* ----inicio do main---- */
+
+.follows{
+    padding: .25rem .5rem;
+}
+
+.follows > .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.seguidores ,
+.seguindo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-user{
+    padding: 1rem 0;
+    margin: 0 0 1rem 0;
+}
+
+.username{
+    text-align: center;
+}
+
+.username p{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+/* ----inicio do feed---- */
+
+.feed{
+    padding: .25rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.feed > .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    row-gap: 3rem;
+}
+
+.boxpic{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
+.boxpic > img{
+    height: 120%;
+    width: auto;
+    object-fit: cover;
+}
+
+.perfilmini{
+    background-color: #DA8EA5;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.perfilmini > img{
+    width: 105%;
+    height: auto;
+    object-fit: cover;
+}
+
+.namemini{
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    top: .75rem;
+    left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 1.5rem;
+    
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.namemini h6{
+    color: var(--color-white);
+    font-size: .75rem;
+    font-weight: 300;
+    padding: 0 1rem 0 2rem;
+}
+
+.actions{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .5);
+    position: absolute;
+    bottom: 0;
+    height: 1.5rem;
+    width: 100%;
+}
+
+.like, .comment, .share {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: .5rem;
+    font-size: 1.2em;
+    font-weight: 300;
+    color: var(--color-white);
+}
+
+.like:hover, .comment:hover, .share:hover{
+    background-color: rgba(255, 255, 255, .4);
+    border-radius: .25rem;
+} 
+
+.like img, .comment img, .share img{
+    filter: invert();
+}
+
+.comment-page{
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    position: absolute sticky;
+    background-color: #57a1c4;
+    z-index: 10;
+}
+
+.comment-page .container{
+    background-color: #598340;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/*---- footer and navigation ----*/
+
+footer{
+    background-color: var(--color-white);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    padding-top: .5rem;
+    box-shadow: -1px 0px 10px 1px rgba(0, 0, 0, .4);
+    z-index: 1000;
+}
+
+footer >nav > ul{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav > ul >li{
+    list-style-type: none;
+    display: inline-block;
+}
+
